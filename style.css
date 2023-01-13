@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+/* 
+  Container has 2 columns: 1fr 4fr 
+  Sidebar has 3 rows: 100px 1fr 1fr
+  Header has 2 rows: 1fr 1fr
+    On header 2nd row, "hi there, [name]" is another grid of 2 rows: 1fr 1fr
+  Main Content has 2 columns: 2fr 1fr
+    Each card in main content has 2 rows: 1fr 1fr
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr;
+}
+
+/* 
+.container {
+  display: grid;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.navigation {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+} */
