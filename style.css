@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 /* 
@@ -17,11 +16,12 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   /* height: 100vh; */
+  column-gap: 30px;
 }
 
 .sidebar {
   display: grid;
-  grid-template-rows: 75px 1fr 1fr;
+  grid-template-rows: 75px 0.75fr 1fr;
   align-items: center;
   grid-row: 1 / 3;
   background-color: #0ea5e9;
@@ -40,6 +40,27 @@
   list-style: none;
 }
 
+.main-icon,
+.sub-icon,
+.text {
+  vertical-align: middle;
+}
+
+.main-icon,
+.sub-icon {
+  padding-right: 16px;
+}
+
+.main-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.sub-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 .logo,
 .nav-top-section ul li a,
 .nav-bottom-section ul li a {
@@ -49,17 +70,50 @@
   font-size: 1.25rem;
 }
 
-/* 
-.container {
-  display: grid;
-}
+/* --------------- HEADER STYLING --------------- */
 
-.sidebar {
+.header {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
-.navigation {
+.header-top-half {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.user-panel-bottom {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+}
+
+.user-greeting {
   display: grid;
   grid-template-rows: 1fr 1fr;
-} */
+}
+
+/* --------------- MAIN CONTENT STYLING --------------- */
+
+/*
+  Main Content has 2 columns: 2fr 1fr
+    Each card in main content has 2 rows: 1fr 1fr
+*/
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.trending {
+  grid-column: 2 / 3;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1 / 3;
+}
+
+.projects > p {
+  grid-column: 1 / 3;
+}
