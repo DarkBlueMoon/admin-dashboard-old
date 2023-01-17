@@ -171,6 +171,7 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
   grid-template-columns: 50px 2fr 1fr 50px;
   grid-template-rows: 50px 1fr 50px 1fr;
   background: #eee;
+  padding-bottom: 3rem;
 }
 
 [class^="content-header"] {
@@ -205,6 +206,43 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 
 .announcements {
   grid-row: 2 / 3;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  display: grid;
+  align-content: space-between;
+}
+
+/* .announcement-card .announcement-title,
+.announcement-card .announcement-description {} */
+
+.announcement-card .announcement-title {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.announcement-card .announcement-description {
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.announcement-card {
+  border-bottom: 1px solid #bbb;
+  margin: 5px 0;
+}
+
+/* .announcement-card {
+  position: relative;
+} */
+
+/* .announcement-card:after {
+  position: absolute;
+  content: "";
+  width: 
+} */
+
+.announcement-card:last-of-type {
+  border-bottom: none;
 }
 
 .trending {
@@ -213,7 +251,6 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 
 .project-card {
   display: grid;
-  /* border: 1px solid black; */
   background: white;
   border-radius: 10px;
   grid-template-rows: auto 50px;
