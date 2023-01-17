@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -170,12 +170,13 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
   display: grid;
   grid-template-columns: 50px 2fr 1fr 50px;
   grid-template-rows: 50px 1fr 50px 1fr;
-  background: #999;
+  background: #eee;
 }
 
 [class^="content-header"] {
-  font-weight: bold;
+  font-weight: 500;
   align-self: end;
+  padding-bottom: 10px;
 }
 
 .content-header-trending,
@@ -198,6 +199,8 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row: 2 / 5;
+  gap: 1rem;
+  margin-right: 20px;
 }
 
 .announcements {
@@ -206,4 +209,34 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 
 .trending {
   grid-row: 4 / 5;
+}
+
+.project-card {
+  display: grid;
+  /* border: 1px solid black; */
+  background: white;
+  border-radius: 10px;
+  grid-template-rows: auto 50px;
+  padding: 40px 20px 20px;
+  border-left: 10px solid orange;
+}
+
+.project-card .project-title {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.project-card .project-description {
+  font-weight: 100;
+}
+
+.project-card .card-bottom {
+  justify-self: right;
+  align-self: center;
+}
+
+.project-card .card-bottom .sub-icon {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1.5rem;
 }
